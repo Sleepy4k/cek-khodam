@@ -1,5 +1,18 @@
 const PROCCESS_TO_GENERATE = 2000;
 
+function readGeneratedWord() {
+  // Setup text-to-speech
+  const name = document.getElementById('name').innerHTML;
+  const meaning = document.getElementById('meaning').innerHTML;
+
+  const speech = new SpeechSynthesisUtterance();
+  speech.lang = 'id-ID';
+  speech.rate = 1;
+  speech.text = `Khodam kamu adalah ${name}. Artinya ${meaning}`;
+
+  window.speechSynthesis.speak(speech);
+}
+
 function generate() {
   const input = document.getElementById('input-name')?.value;
 
@@ -25,6 +38,8 @@ function generate() {
     document.getElementById('meaning').innerHTML = word.meaning;
     document.getElementById('loading').style.display = 'none';
     document.getElementById('result').style.display = 'block';
+
+    readGeneratedWord();
   }, PROCCESS_TO_GENERATE);
 }
 
