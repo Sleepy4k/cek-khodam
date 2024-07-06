@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=7">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cek Kodam Kalian</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <div class="card">
+      <h1 class="title">Cek Khodam</h1>
+      <p class="title">Masukkan nama untuk mengetahui khodam</p>
+      <input type="text" class="text-input" id="input-name" placeholder="Ketik nama kamu di sini" />
+      <button type="submit" id="generate" onclick="generate()">Cek Khodam</button>
+      <button type="reset" class="button-reset" onclick="resetForm()">Cek Lagi</button>
+      <div id="loading" class="loading-spinner"></div>
+      <div id="result">
+        <h2 id="name"></h2>
+        <p id="meaning"></p>
+      </div>
+    </div>
+
+    <div class="footer">
+      © <span id="date" class="copyright"></span> <a href="https://github.com/sleepy4k" class="copyright">Benjamin4k</a>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+    <script src="words.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>

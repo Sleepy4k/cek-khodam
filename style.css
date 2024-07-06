@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+:root {
+  --white-color: #ffffff;
+  --primary-color: #FFA500;
+  --secondary-color: #439c8f;
+  --tertiary-color: #4e4aa7;
+  --quaternary-color: #97D3FF;
+}
+
+body {
+  margin: 0;
+  padding: 20px;
+  display: flex;
+  min-height: 100vh;
+  text-align: center;
+  align-items: center;
+  box-sizing: border-box;
+  flex-direction: column;
+  justify-content: center;
+  font-family: 'Poppins', sans-serif;
+  background-color: rgba(74, 34, 12, 0.9);
+}
+
+.card {
+  width: 100%;
+  padding: 20px;
+  max-width: 500px;
+  position: relative;
+  border-radius: 10px;
+  border: 1px solid var(--primary-color);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+  background-color: rgba(147, 148, 171, 0.25);
+}
+
+.title {
+  margin-bottom: 20px;
+  color: var(--primary-color);
+}
+
+.text-input {
+  width: 80%;
+  padding: 10px;
+  font-size: 16px;
+  color: #f1f1f1;
+  text-align: center;
+  margin-bottom: 20px;
+  border-radius: 200px;
+  background-color: transparent;
+  border: 2px solid var(--primary-color);
+}
+
+.loading-spinner {
+  width: 40px;
+  height: 40px;
+  display: none;
+  margin-top: 5%;
+  margin-left: 45%;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  border-top: 4px solid var(--primary-color);
+  border: 4px solid rgba(255, 255, 255, 0.3);
+}
+
+.button-reset {
+  margin-top: 20px;
+}
+
+button {
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  padding: 10px 25px;
+  border-radius: 200px;
+  color: var(--white-color);
+  background-color: var(--secondary-color);
+  transition: background-color 0.3s, transform 0.2s, box-shadow 0.2s;
+}
+
+button:hover {
+  transform: translateY(-3px);
+  background-color: var(--tertiary-color);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+#result {
+  display: none;
+}
+
+.footer {
+  width: 100%;
+  bottom: 10px;
+  font-weight: bold;
+  position: absolute;
+  text-align: center;
+  color: var(--quaternary-color);
+}
+
+.copyright {
+  text-decoration: none;
+  color: var(--primary-color);
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
