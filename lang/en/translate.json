@@ -1,0 +1,9 @@
+{
+  "title": "Check your Khodam",
+  "lang": "Language",
+  "header": "Check Khodam",
+  "description": "Please enter your name to find out your khodam",
+  "input": "Enter your name here",
+  "submit": "Check Khodam",
+  "reset": "Check Again"
+}
