@@ -33,6 +33,21 @@ body {
   background-color: rgba(147, 148, 171, 0.25);
 }
 
+.language {
+  top: 0;
+  right: 0;
+  margin-top: 2vh;
+  position: absolute;
+}
+
+.language .lang-helper .main {
+  margin-right: 1vw;
+}
+
+.language .flag {
+  margin-right: 1vw;
+}
+
 .title {
   margin-bottom: 20px;
   color: var(--primary-color);
@@ -66,7 +81,7 @@ body {
   margin-top: 20px;
 }
 
-button {
+.btn button {
   border: none;
   cursor: pointer;
   font-size: 16px;
@@ -77,7 +92,7 @@ button {
   transition: background-color 0.3s, transform 0.2s, box-shadow 0.2s;
 }
 
-button:hover {
+.btn button:hover {
   transform: translateY(-3px);
   background-color: var(--tertiary-color);
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
@@ -97,8 +112,20 @@ button:hover {
 }
 
 .copyright {
+  color: var(--primary-color);
+}
+
+.copyright b, span {
+  color: var(--white-color);
+}
+
+.copyright a {
   text-decoration: none;
   color: var(--primary-color);
+}
+
+.copyright a:hover {
+  text-decoration: underline;
 }
 
 @keyframes spin {

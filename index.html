@@ -5,29 +5,53 @@
     <meta http-equiv="X-UA-Compatible" content="IE=7">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cek Kodam Kalian</title>
-    <link rel="stylesheet" href="style.css">
+
+    <meta name="author" content="Benjamin4k">
+    <meta name="keywords" content="khodam, cek khodam, trend">
+    <meta name="description" content="Cek khodam dari nama kamu">
+
+    <link rel="stylesheet" href="style/main.css">
+
+    <title>Khodam</title>
   </head>
   <body>
     <div class="card">
-      <h1 class="title">Cek Khodam</h1>
-      <p class="title">Masukkan nama untuk mengetahui khodam</p>
-      <input type="text" class="text-input" id="input-name" placeholder="Ketik nama kamu di sini" />
-      <button type="submit" id="generate" onclick="generate()">Cek Khodam</button>
-      <button type="reset" class="button-reset" onclick="resetForm()">Cek Lagi</button>
+      <div class="language">
+        <span class="lang-helper">
+          <span data-i18n="lang">Bahasa</span>
+          <span class="main">:</span>
+        </span>
+
+        <img id="flag" alt="Language" class="flag" onclick="changeLanguage()" />
+      </div>
+
+      <div class="title">
+        <h1 data-i18n="header">Cek Khodam</h1>
+        <p data-i18n="description">Masukkan nama untuk mengetahui khodam</p>
+      </div>
+
+      <input type="text" class="text-input" id="input-name" placeholder="Ketik nama kamu di sini" data-i18n="input" data-i18n-type="input" />
+
+      <div class="btn">
+        <button type="submit" id="generate" onclick="generate()" data-i18n="submit">Cek Khodam</button>
+        <button type="reset" class="button-reset" onclick="resetForm()" data-i18n="reset">Cek Lagi</button>
+      </div>
+
       <div id="loading" class="loading-spinner"></div>
+
       <div id="result">
         <h2 id="name"></h2>
         <p id="meaning"></p>
       </div>
     </div>
 
-    <div class="footer">
-      © <span id="date" class="copyright"></span> <a href="https://github.com/sleepy4k" class="copyright">Benjamin4k</a>
+    <div class="footer copyright">
+      Copyright <b>©</b> <span id="date"></span> <a href="https://github.com/sleepy4k">Benjamin4k</a>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
-    <script src="words.js"></script>
-    <script src="script.js"></script>
+    <script src="script/i18n.js"></script>
+    <script src="script/words.js"></script>
+    <script src="script/main.js"></script>
   </body>
 </html>
