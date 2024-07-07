@@ -56,7 +56,7 @@ window.addEventListener('load', function() {
   currentLang = lang;
 
   // Load the language file from lang folder and set it to translations
-  fetch(`../lang/${lang}/translate.json`)
+  fetch(`/lang/${lang}/translate.json`)
     .then(response => response.json())
     .then(data => {
       for (const key in data) {
